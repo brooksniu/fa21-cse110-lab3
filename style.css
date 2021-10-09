@@ -1,9 +1,16 @@
 /*stylesheet for Meeting record*/
+@font-face {
+    font-family: 'Nova Square', cursive;
+    src: url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
+}
 body {
     font-size: 1.2em;
     background-color: burlywood;
 }
 
+* {
+    font-family: 'Nova Square', cursive;
+}
 
 #attendees {
     color: black;
@@ -12,26 +19,124 @@ body {
 }
 
 .paragraph {
-    color: rgb(78, 5, 0);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .paragraph.long {
     color: hsl(240,100%,100%)
+    
 }
 
 .box {
-    border: 0.2in solid rebeccapurple;
+    border-color:rebeccapurple;
+    border-style: solid;
+    border-width: 0.2in;
     border-radius: 1cm;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.inbox {
+    margin: 1em 1em 1em 1em;
+    text-align:center;
+}
+
+.title {
+    margin:auto;
 }
 
 .px {
     width: 200px;
 }
 
-h4 {
-    font-size: 2ex;
+#foot h4 {
+    font-size: 3ex
+}
+
+div > h2 {
+    color:chocolate;
+}
+
+#agendaitem ~ li {
+    color:darkgreen;
+}
+
+#attendeeitem + li {
+    color:dodgerblue;
 }
 
 .adaptive {
-    font-size: 1vh;
+    font-size:1.3vh;
+    padding-top:1vh;
+    padding-left: 1.2vh;
+    padding-right: 1.2vh;
+    padding-bottom: .5vh;
+    display: inline;
 }
+
+a[href="https://www.in.gov/idem/"] {
+    padding: .5em .5em .5em .5em;
+    text-decoration: wavy underline;
+    display: inline-block;
+}
+
+@media (min-width: 35rem) {
+    p:hover{
+        color: blueviolet;
+    }
+    
+}
+
+@media (max-width: 50rem) {
+    p:active{
+        color:white;
+    }
+    
+}
+
+h1,h2 {
+    height: 3em;
+    max-width:5em;
+    min-width:.5em;
+    position:static;
+}
+
+#top {
+    text-align:right;
+    position:sticky;
+    bottom:0.5em;
+    margin: 1em;
+}
+
+.flex {
+    display:flex;
+    flex-direction: ltr;
+    justify-content: flex-start;
+    flex-grow:1;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 50px;
+}
+
+/*
+.grid.item1 {
+    grid-column-start: auto;
+    grid-column-end: auto;
+    grid-row-start: auto;
+    grid-row-end: auto;
+}
+
+.item2 {
+    grid-column-start: auto;
+    grid-column-end: auto;
+    grid-row-start: auto;
+    grid-row-end: auto;
+}
+*/
